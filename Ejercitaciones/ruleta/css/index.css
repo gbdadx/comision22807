@@ -1,0 +1,13 @@
+* {
+
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+section{
+    background-color: bisque;
+    padding:30px;
+    text-align: center;
+}

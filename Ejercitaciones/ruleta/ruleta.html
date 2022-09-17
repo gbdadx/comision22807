@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruleta</title>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+    <!--
+    <header>
+        <h1>Ruleta- ejercicio js</h1>
+    </header>
+    <aside>
+        <h2>reglas</h2>
+        <ul>
+            <li>
+                el programa te pedira el nombre y el tipo de apuesta
+                <ul>
+                    <li>numeros, del 0 al 36</li>
+                    <li>color, rojo o negro</li>
+                    <li>paridad, par o impar</li>
+                </ul>
+            </li>
+            <li>solo se permite una jugada, un tipo de apuesta, por vez</li>
+            <li>luego, te mostrara lo que salio en la ruleta</li>
+            <li>finalmente, un mensaje felicitando o de condolencias</li>
+        </ul>
+    </aside>-->
+    <section>
+        <p id="nom">aqui ira tu nombre</p>
+        <p id="apuesta">aqui ira tu apuesta</p>
+        <h2>rien ne va plus!!!!</h2>
+<img src="./img/imoneyslots.gif" alt="ruleta">  
+<br><br>
+  <p id="resultado">aqui ira lo que salio en la ruleta</p>
+        <p id="desenlace">
+            aqui ira el comentario final, felicitaciones o condolencias?
+        </p>
+        <div>
+            <audio controls autoplay>
+                <source src="./img/Scott Joplin - The Entertainer (1902, piano roll).mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>        </div>
+    </section>
+
+    <script>
+        let nombre;
+        let apuesta;
+        let auxiliar;
+        let aux2;
+        let jugada;
+
+        //FUNCIONES
+
+        // pedir, devuelve lo que le pidas
+        function pedir(tipo) {
+            let variable = prompt(`ingrese su ${tipo}`).toLowerCase()
+            return variable
+        }
+
+        function randomInteger(min, max) {
+            let rand = min - 0.5 + Math.random() * (max - min + 1)
+            return Math.round(rand)
+        }
+
+        function felicitaciones() {
+            alert(`Enhorabuena, ${nombre}, has ganado!!!`);
+            document.getElementById('desenlace').innerHTML = `Enhorabuena, ${nombre}, has ganado!!!`;
+        }
+
+        function condolencias() {
+            alert(`Pues na, ... otra vez sera, ${nombre} animo!`);
+            document.getElementById('desenlace').innerHTML = `que pena, ${nombre}, has perdido!!!`;
+
+        }
+
+
+        // fin de funciones
+        //SCRIPT
+        //pide el nombre y lo pone en el html
+        nombre = pedir('nombre')
+        document.getElementById('nom').innerHTML = `Bien venid@, ${nombre}`;
+
+        auxiliar = pedir('prefiere apostar a NUMERO (n), COLOR (C) o PARIDAD(p)');
+
+        switch (auxiliar) {
+            case 'n':
+                apuesta = Number(pedir('su numero'))
+                document.getElementById(
+                    'apuesta',
+                ).innerHTML = `SU APUESTA: numero ${apuesta}`;
+
+                auxiliar = randomInteger(0, 36);
+                document.getElementById(
+                    'resultado'
+                ).innerHTML = `Resultado de la ruleta: ${auxiliar}`;
+                if (apuesta == auxiliar) felicitaciones();
+                else condolencias();
+                break
+            case 'c':
+                apuesta = pedir('su color: rojo (r) o negro(n)');
+                auxiliar = (apuesta == 'r') ? 'rojo' : 'negro';
+                document.getElementById('apuesta').innerHTML = `SU APUESTA: color ${auxiliar}`;
+
+                aux2 = randomInteger(0, 1);
+                aux2 = (aux2 == 1) ? 'rojo' : 'negro';
+                document.getElementById('resultado').innerHTML = `Resultado de la ruleta: ${aux2}`;
+
+                if (auxiliar == aux2) felicitaciones();
+                else condolencias();
+                break
+            case 'p':
+                apuesta = pedir('su apuesta: par  o impar ');
+                auxiliar = (apuesta == 'par') ? 'par' : 'impar';
+                document.getElementById(
+                    'apuesta'
+                ).innerHTML = `SU APUESTA: paridad: ${auxiliar}`;
+
+                aux2 = randomInteger(0, 1);
+                aux2 = (aux2 == 1) ? 'par' : 'impar';
+                document.getElementById(
+                    'resultado'
+                ).innerHTML = `Resultado de la ruleta: ${aux2}`;
+                if (aux2 == auxiliar) felicitaciones();
+                else condolencias();
+                break
+
+            default:
+                alert('ninguna respuesta valida, intente otra vez ')
+                break
+        }
+    </script>
+</body>
+
+</html>
