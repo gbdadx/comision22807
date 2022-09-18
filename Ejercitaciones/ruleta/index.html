@@ -84,11 +84,21 @@
         nombre = pedir('nombre')
         document.getElementById('nom').innerHTML = `Bien venid@, ${nombre}`;
 
-        auxiliar = pedir('prefiere apostar a NUMERO (n), COLOR (C) o PARIDAD(p)');
+        auxiliar = pedir('prefiere apostar a NUMERO (n), COLOR (c) o PARIDAD(p)').toLowerCase();
 
         switch (auxiliar) {
             case 'n':
-                apuesta = Number(pedir('su numero'))
+                let contador=0;
+                while(true){
+                apuesta = Number(pedir('su numero'));
+                if(apuesta <0 || apuesta>36){
+                    alert('el numero debe ser entre 0 y 36, elija otro numero');
+                    if(contador>1) alert('no insistas, solo puede ser de 0 a 36');
+
+                } 
+                    else break;
+                    contador++;
+                }
                 document.getElementById(
                     'apuesta',
                 ).innerHTML = `SU APUESTA: numero ${apuesta}`;
@@ -101,8 +111,8 @@
                 else condolencias();
                 break
             case 'c':
-                apuesta = pedir('su color: rojo (r) o negro(n)');
-                auxiliar = (apuesta == 'r') ? 'rojo' : 'negro';
+                apuesta = pedir('su color: rojo (r) o negro(n)').toLowerCase();
+                auxiliar = (apuesta == 'r'|| apuesta=='rojo') ? 'rojo' : 'negro';
                 document.getElementById('apuesta').innerHTML = `SU APUESTA: color ${auxiliar}`;
 
                 aux2 = randomInteger(0, 1);
@@ -113,8 +123,8 @@
                 else condolencias();
                 break
             case 'p':
-                apuesta = pedir('su apuesta: par  o impar ');
-                auxiliar = (apuesta == 'par') ? 'par' : 'impar';
+                apuesta = pedir('su apuesta: par  o impar ').toLowerCase();
+                auxiliar = (apuesta == 'par'|| apuesta=='p') ? 'par' : 'impar';
                 document.getElementById(
                     'apuesta'
                 ).innerHTML = `SU APUESTA: paridad: ${auxiliar}`;

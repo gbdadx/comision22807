@@ -12,17 +12,17 @@
 
 section {
     background-color: bisque;
-    padding: 30px;
+    padding: 10px 20px;
     text-align: center;
 }
 p{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 h2{
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 #nom{
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
