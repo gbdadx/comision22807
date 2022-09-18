@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ewert&family=Roboto:ital@1&display=swap');
+
 * {
 
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Ewert', cursive;
+    /*font-family: 'Roboto', sans-serif;*/
 
 }
-section{
+
+section {
     background-color: bisque;
-    padding:30px;
+    padding: 30px;
     text-align: center;
 }
+p{
+    font-size: 2rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 3rem;
+}
+#nom{
+    font-size: 3rem;
+}
+
