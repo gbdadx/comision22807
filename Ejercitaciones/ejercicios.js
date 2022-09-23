@@ -38,18 +38,36 @@ const nuevaMultiplicacion = 10 * 4 === 40;
 // Resuelve el siguiente problema matemático:
 const nuevoModulo = 21 % 7 === 0;
 
-
-
+/*
 function devolverString(str) {
-    return str;
+    document.write(str);
 
 }
+devolverString('Batman'); */
+const devolverString = str => document.write(str);
 
-
-
+devolverString('batman');
+/////////////////////////////
 function suma(x, y) {
-    return (x + y);
+    document.write(x + y + "</br>");
 }
+
+
+suma(20, 30);
+
+/*
+como funcion flecha:
+
+const suma=(x, y)=>document.write((x+y)+"</br>");
+
+
+*/ 
+
+
+
+
+
+///////////////////////
 
 function resta(x, y) {
     // Resta "x" de "y" y devuelve el valor
@@ -57,13 +75,17 @@ function resta(x, y) {
     return (x - y);
 
 }
-
+//////////////////////
 function multiplica(x, y) {
     // Multiplica "x" por "y" y devuelve el valor
     // Tu código:
     return (x * y);
 }
+const multiplica= (x, y) => (x * y);
 
+
+
+/////////////////////////////////
 function divide(x, y) {
     // Divide "x" entre "y" y devuelve el valor
     // Tu código:
@@ -249,3 +271,4 @@ function esVocal(letra) {
     }
     return dato;
 }
+esVocal(prompt('ingrese una vocal').toLowerCase());
