@@ -5,14 +5,14 @@ function devolverPrimerElemento(array) {
   // Tu código:
   console.log(array[0]);
 }
-
+/************************************ */
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
   console.log(array[array.length - 1]);
 }
-
+/********************************/
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
@@ -24,113 +24,112 @@ function obtenerLargoDelArray(array) {
 // Aumenta cada entero por 1
 // y devuelve el array
 // Tu código:
-/*
+
 function incrementarPorUno(array) {
- 
-console.log(array.map(sumaUno));
-function sumaUno(num){ return num+1;}*/
 
-
-
-
-
-
-const incrementarPorUno = (array) => array.map((el) => el + 1);
-incrementarPorUno(numeros);
-/*********************************** */
-function agregarItemAlFinalDelArray(array, elemento) {
-  // Añade el "elemento" al final del array
-  // y devuelve el array
-  // Tu código:
-  return array.push(elemento);
-}
-
-
-function agregarItemAlComienzoDelArray(array, elemento) {
-  // Añade el "elemento" al comienzo del array
-  // y devuelve el array
-  // Pista: usa el método `.unshift`
-  // Tu código:
-  return array.unshif(elemento);
-}
-
-
-function dePalabrasAFrase(palabras) {
-  // "palabras" es un array de strings/cadenas
-  // Devuelve un string donde todas las palabras estén concatenadas
-  // con espacios entre cada palabra
-  // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
-  // Tu código:
-  return palabras.join(` `);
-}
-
-
-function arrayContiene(array, elemento) {
-  // Comprueba si el elemento existe dentro de "array"
-  // Devuelve "true" si está, o "false" si no está
-  // Tu código:
-  console.log(array.includes(elemento));
-}
-arrayContiene(animales, 'Murcielago');
-
-
-function agregarNumeros(numeros) {
-  // "numeros" debe ser un arreglo de enteros (int/integers)
-  // Suma todos los enteros y devuelve el valor
-  // Tu código:
-  suma = 0;
-  for (let i = 0; i < numeros.length; i++) {
-    suma += numeros[i];
+  console.log(array.map(sumaUno));
+  function sumaUno(num) { return num + 1; 
   }
-  console.log(suma);
-}
-agregarNumeros(numeros);
 
-//console.log(numeros.reduce((acumulador, actual) => acumulador + actual));
+  /*
+  
+  const incrementarPorUno = (array) => array.map((el) => el + 1);*/
+  incrementarPorUno(numeros);
 
-
-/********************************/
-const resultadosTest = [1, 2, 3, 4, 5, 6];
-function promedioResultadosTest(resultadosTest) {
-  // "resultadosTest" debe ser una matriz de enteros (int/integers)
-  // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
-  // Tu código:
-  let cont = 0;
-  let sum = 0;
-  for (let i = 0; i < resultadosTest.length; i++) {
-    sum += resultadosTest[i];
-    cont++;
+  /*********************************** */
+  function agregarItemAlFinalDelArray(array, elemento) {
+    // Añade el "elemento" al final del array
+    // y devuelve el array
+    // Tu código:
+    return array.push(elemento);
   }
-  return sum / cont;
-}
-promedioResultadosTest(resultadosTest)
-/*
-****************************************************************************/
-function numeroMasGrande(numeros) {
-  // "numeros" debe ser una matriz de enteros (int/integers)
-  // Devuelve el número más grande
-  // Tu código:
-  console.log(Math.max(...numeros));//SPREAD OPERATOR
-}
-numeroMasGrande(numeros)
-/***************************************** */
-function multiplicarArgumentos() {
-  // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
-  // Escribe tu código aquí:
-  let resultado = 1;
-  if (arguments.length < 1)
-    return 0;
-}
-if (arguments.length == 1) {
-  resultado = arguments[0];
+
+/************************************************************* */
+  function agregarItemAlComienzoDelArray(array, elemento) {
+    // Añade el "elemento" al comienzo del array
+    // y devuelve el array
+    // Pista: usa el método `.unshift`
+    // Tu código:
+    return array.unshif(elemento);
+  }
+/********************************************************** */
+
+  function dePalabrasAFrase(palabras) {
+    // "palabras" es un array de strings/cadenas
+    // Devuelve un string donde todas las palabras estén concatenadas
+    // con espacios entre cada palabra
+    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
+    // Tu código:
+    return palabras.join(` `);
+  }
+
+/******************************************** */
+  function arrayContiene(array, elemento) {
+    // Comprueba si el elemento existe dentro de "array"
+    // Devuelve "true" si está, o "false" si no está
+    // Tu código:
+    console.log(array.includes(elemento));
+  }
+  arrayContiene(animales, 'Murcielago');
+
+/*************************************************************** */
+  function agregarNumeros(numeros) {
+    // "numeros" debe ser un arreglo de enteros (int/integers)
+    // Suma todos los enteros y devuelve el valor
+    // Tu código:
+    suma = 0;
+    for (let i = 0; i < numeros.length; i++) {
+      suma += numeros[i];
+    }
+    console.log(suma);
+  }
+  agregarNumeros(numeros);
+
+  //console.log(numeros.reduce((acumulador, actual) => acumulador + actual));
+
+
+  /********************************/
+  const resultadosTest = [1, 2, 3, 4, 5, 6];
+  function promedioResultadosTest(resultadosTest) {
+    // "resultadosTest" debe ser una matriz de enteros (int/integers)
+    // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
+    // Tu código:
+    let cont = 0;
+    let sum = 0;
+    for (let i = 0; i < resultadosTest.length; i++) {
+      sum += resultadosTest[i];
+      cont++;
+    }
+    return sum / cont;
+  }
+  promedioResultadosTest(resultadosTest)
+  /*
+  ****************************************************************************/
+  function numeroMasGrande(numeros) {
+    // "numeros" debe ser una matriz de enteros (int/integers)
+    // Devuelve el número más grande
+    // Tu código:
+    console.log(Math.max(...numeros));//SPREAD OPERATOR
+  }
+  numeroMasGrande(numeros)
+  /***************************************** */
+  function multiplicarArgumentos() {
+    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
+    // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+    // Escribe tu código aquí:
+    let resultado = 1;
+    if (arguments.length < 1)
+      return 0;
+  }
+  if (arguments.length == 1) {
+    resultado = arguments[0];
+    return resultado;
+  }
+  for (var i = 0; i < arguments.length; i++) {
+    resultado *= arguments[i];
+  }
+
   return resultado;
-}
-for (var i = 0; i < arguments.length; i++) {
-  resultado *= arguments[i];
-}
-
-return resultado;
 }
 multiplicarArgumentos()
 /************************ */
@@ -182,7 +181,7 @@ todosIguales(arreglo)
 
 //creo que se puede hacer con every 
 /******************************* */
-const array=['Enero', 'febrero', 'Marzo', 'Noviembre'];
+const array2 = ['Enero', 'febrero', 'Marzo', 'Noviembre'];
 function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
@@ -201,13 +200,13 @@ function mesesDelAño(array) {
     }
 
   }
-  return (mesesPedidos.length==3)?  mesesPedidos: "No se encontraron los meses pedidos";
+  return (mesesPedidos.length == 3) ? mesesPedidos : "No se encontraron los meses pedidos";
 
 }
 
-mesesDelAño(array)
-/***************************/ 
-const arr1=[100, 20, 105, 800, 22, 201, 3];
+mesesDelAño(array2)
+/***************************/
+const arr1 = [100, 20, 105, 800, 22, 201, 3];
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
@@ -234,7 +233,7 @@ function breakStatement(numero) {
     suma += i;
     if (i === suma) {
       console.log('se interrumpio la ejecucion ');
-       break;
+      break;
     }
     arreglo.push(i);
   }
