@@ -44,7 +44,7 @@ function incrementarPorUno(array) {
     return array.push(elemento);
   }
 
-/************************************************************* */
+  /************************************************************* */
   function agregarItemAlComienzoDelArray(array, elemento) {
     // Añade el "elemento" al comienzo del array
     // y devuelve el array
@@ -52,7 +52,7 @@ function incrementarPorUno(array) {
     // Tu código:
     return array.unshif(elemento);
   }
-/********************************************************** */
+  /********************************************************** */
 
   function dePalabrasAFrase(palabras) {
     // "palabras" es un array de strings/cadenas
@@ -63,7 +63,7 @@ function incrementarPorUno(array) {
     return palabras.join(` `);
   }
 
-/******************************************** */
+  /******************************************** */
   function arrayContiene(array, elemento) {
     // Comprueba si el elemento existe dentro de "array"
     // Devuelve "true" si está, o "false" si no está
@@ -72,7 +72,7 @@ function incrementarPorUno(array) {
   }
   arrayContiene(animales, 'Murcielago');
 
-/*************************************************************** */
+  /*************************************************************** */
   function agregarNumeros(numeros) {
     // "numeros" debe ser un arreglo de enteros (int/integers)
     // Suma todos los enteros y devuelve el valor
@@ -164,10 +164,11 @@ function empiezaConNueve(n) {
 }
 empiezaConNueve(985)
 /********************************* */
-function todosIguales(arreglo) {
-  //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
+//Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
+  //Escribe tu código aquí 
+function todosIguales(arreglo) {
+   
   let elem = arreglo[0];
   let contador = 0;
   for (let e of arreglo) {
@@ -181,12 +182,15 @@ todosIguales(arreglo)
 
 //creo que se puede hacer con every 
 /******************************* */
+//Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
+  //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
+//Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
+// "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
+//Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
+// Tu código:
 const array2 = ['Enero', 'febrero', 'Marzo', 'Noviembre'];
 function mesesDelAño(array) {
-  //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
-  // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
-  //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
-  // Tu código:
+
   let mesesPedidos = [];
   for (let mes of array) {
     switch (mes) {
@@ -211,22 +215,19 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  return array.filter(mayor);
-
-  function mayor(numero) {
-    return numero > 100;
-  }
+  return array.filter(elementos => elementos > 100 );
 }
 mayorACien(arr1);
 /********************** */
-function breakStatement(numero) {
-  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+//Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array. 
   //Devolver el array
   //Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y 
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+function breakStatement(numero) {
+  
   let arreglo = [];
   let suma = 0;
   for (let i = numero; i <= 10; i += 2) {
@@ -241,13 +242,14 @@ function breakStatement(numero) {
 }
 
 /*********************** */
-function continueStatement(numero) {
-  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+//Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
   //Guardar cada nuevo valor en un array.    
   //Devolver el array
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+function continueStatement(numero) {
+  
   let arreglo = [];
   for (let i = numero; i <= 10; i += 2) {
     if (i === 5) continue;
